@@ -1,7 +1,7 @@
 package main
 
-import "fmt"
+import "./lib/swagger"
 
 func main() {
-	fmt.Println("Hello World!")
+	swagger.HelloWorld()
 }
