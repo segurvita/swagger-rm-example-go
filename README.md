@@ -1,2 +1,2 @@
 # swagger-rm-example-go
-swagger-rm-example
+<div style="text-align:right">Language: <i>English</i> | <a href="README_JA.md">日本語</a></div>
