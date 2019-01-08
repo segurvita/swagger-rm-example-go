@@ -1,6 +1,8 @@
 # swagger-rm-example-go
 <div style="text-align:right">Language: <a href="README.md">English</a> | <i>日本語</i></div>
 
+
+
 swaggerのコードからexampleを取り除きます。Goで書かれています。
 
 
