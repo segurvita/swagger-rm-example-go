@@ -1,8 +1,8 @@
 package swagger
 
 import (
-	"errors"
 	"fmt"
+	"io/ioutil"
 )
 
 // practice of println
@@ -10,10 +10,17 @@ func HelloWorld() {
 	fmt.Println("Hello World!")
 }
 
-// practice of test
-func example(code string) (int, error) {
-	if code == "hoge" {
-		return 1, nil
+// open file
+func ReadFile(filepath string) (string, error) {
+	// open file
+	b, err := ioutil.ReadFile(filepath) // just pass the file name
+	if err != nil {
+		return "", err
 	}
-	return 0, errors.New("code must be hoge")
+
+	// convert content to string
+	str := string(b)
+	fmt.Println(str)
+
+	return str, nil
 }

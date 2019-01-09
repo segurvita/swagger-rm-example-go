@@ -1,0 +1,30 @@
+swagger: '2.0'
+info:
+  description: This is a WebAPI about an apartment.
+  version: 0.0.1
+  title: Apartment API.
+paths:
+  '/rooms/{room-id}':
+    get:
+      summary: Room infomation API
+      description: Returns the information of the specified room-id
+      parameters:
+        - name: room-id
+          in: path
+          description: ID of room to be acquired
+          required: true
+          type: integer
+          format: int64
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              id:
+                type: integer
+                format: int64
+                example: 404
+              comment:
+                type: string
+                example: It is Room 404. It may be a room that does not exist anywhere.

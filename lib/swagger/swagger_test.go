@@ -1,25 +1,23 @@
 package swagger
 
 import (
+	"fmt"
 	"testing"
 )
 
-func TestExampleSuccess(t *testing.T) {
-	result, err := example("hoge")
-	if err != nil {
+func TestReadFileSuccess(t *testing.T) {
+	result, err := ReadFile("../../asset/apartment-api.yaml")
+	if err == nil {
+		fmt.Println("result: " + result)
+	} else {
 		t.Fatalf("failed test %#v", err)
-	}
-	if result != 1 {
-		t.Fatal("failed test")
 	}
 }
 
-func TestExampleFailed(t *testing.T) {
-	result, err := example("fuga")
+func TestReadFileFailed(t *testing.T) {
+	result, err := ReadFile("dummy")
 	if err == nil {
-		t.Fatal("failed test")
-	}
-	if result != 0 {
+		fmt.Println(result)
 		t.Fatal("failed test")
 	}
 }
